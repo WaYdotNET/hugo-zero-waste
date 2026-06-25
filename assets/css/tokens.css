@@ -1,0 +1,23 @@
+:root {
+  --zw-bg: #FAF9F6;
+  --zw-ink: #1a1a1a;
+  --zw-muted: #7a7569;
+  --zw-accent: #6B8E6B;
+  --zw-line: #ebe8e0;
+  --zw-code-bg: #f3f1ec;
+
+  --zw-font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --zw-font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --zw-maxw: 720px;
+  --zw-gap: 1.5rem;
+  --zw-radius: 6px;
+}
+[data-theme="dark"] {
+  --zw-bg: #16181d;
+  --zw-ink: #e8e6e1;
+  --zw-muted: #8b8f98;
+  --zw-accent: #8fae8f;
+  --zw-line: #2a2d35;
+  --zw-code-bg: #1e2127;
+}
