@@ -3,14 +3,14 @@
 {{ $featured := index $posts 0 }}
 {{ $rest := first 6 (after 1 $posts) }}
 
-{{ with site.Params.homeProfile.bio }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+{{ with site.Params.homeProfile.bio }}<blockquote class="lead">{{ . | markdownify }}</blockquote>{{ end }}
 
 {{ with $featured }}
 {{ $p := . }}
 <section class="home-section">
   <h2 class="label">In evidenza</h2>
   <article class="featured">
-    {{ with .Params.cover }}{{ with .image }}<a href="{{ $p.RelPermalink }}"><img class="f-cover" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
+    {{ with .Params.cover }}{{ with .image }}<a href="{{ $p.RelPermalink }}" aria-label="{{ $p.Title }}" tabindex="-1"><img class="f-cover" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
     <a href="{{ $p.RelPermalink }}"><span class="f-title">{{ $p.Title }}</span></a>
     <div class="meta">{{ $p.Date.Format "02 Jan 2006" }} · {{ $p.ReadingTime }} min</div>
     <p class="f-sum">{{ $p.Summary | plainify | truncate 200 }}</p>
