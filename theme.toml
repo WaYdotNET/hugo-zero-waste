@@ -1,7 +1,7 @@
 name = "Zero Waste"
 license = "MIT"
 licenselink = "https://github.com/WaYdotNET/hugo-zero-waste/blob/main/LICENSE"
-description = "A zero-waste, paper & ink Hugo theme — minimal, fast, accessible (WCAG AAA), i18n-ready."
+description = "A zero-waste, logo-centric Hugo theme — minimal, fast, accessible (WCAG AAA), i18n-ready."
 homepage = "https://github.com/WaYdotNET/hugo-zero-waste"
 tags = ["minimal", "blog", "personal", "accessibility", "i18n", "clean"]
 features = ["blog", "responsive", "i18n", "accessible", "syntax-highlighting"]
