@@ -25,3 +25,10 @@ code, pre { font-family: var(--zw-font-mono); font-size: 0.9em; }
 pre { background: var(--zw-code-bg); padding: 1rem; border-radius: var(--zw-radius); overflow-x: auto; }
 .meta { font-family: var(--zw-font-mono); font-size: 0.8rem; color: var(--zw-muted); }
 .label { font-family: var(--zw-font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--zw-accent); }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.8rem; }
+  .site-header { flex-direction: column; gap: 0.6rem; align-items: flex-start; }
+  .site-nav { flex-wrap: wrap; }
+}

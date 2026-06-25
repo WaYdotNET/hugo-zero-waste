@@ -1,0 +1,10 @@
+- id: talks
+  translation: "Talk"
+- id: projects
+  translation: "Progetti open source"
+- id: latest
+  translation: "Ultimi articoli"
+- id: all_posts
+  translation: "tutti gli articoli →"
+- id: theme
+  translation: "tema"
