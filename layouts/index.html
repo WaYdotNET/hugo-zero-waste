@@ -22,7 +22,6 @@
 {{ end }}
 
 {{ partial "home/talks.html" . }}
-<p class="home-more"><a class="label" href="{{ "talks/" | relLangURL }}">{{ i18n "all_talks" }}</a></p>
 
 {{ with $rest }}
 <section class="home-section">
@@ -37,5 +36,4 @@
 {{ end }}
 
 {{ partial "home/projects.html" . }}
-<p class="home-more"><a class="label" href="{{ "projects/" | relLangURL }}">{{ i18n "all_projects" }}</a></p>
 {{ end }}
