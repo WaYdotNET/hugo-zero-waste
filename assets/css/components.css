@@ -1,0 +1,8 @@
+.post-header { margin-bottom: 2rem; }
+.post-meta { margin-top: 0.6rem; }
+.post-meta .tag { border: 0; }
+.post-cover { border-radius: var(--zw-radius); margin-bottom: 1.5rem; }
+.content > * + * { margin-top: 1.2rem; }
+.content h2, .content h3 { margin-top: 2rem; }
+.content blockquote { border-left: 3px solid var(--zw-accent); padding-left: 1rem; color: var(--zw-muted); margin-inline: 0; }
+.content img { border-radius: var(--zw-radius); }

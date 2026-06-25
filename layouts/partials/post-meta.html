@@ -1,0 +1,5 @@
+<div class="post-meta meta">
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+  · {{ .ReadingTime }} min
+  {{ with .Params.tags }} · {{ range . }}<a class="tag" href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a> {{ end }}{{ end }}
+</div>
