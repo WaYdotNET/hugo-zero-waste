@@ -1,0 +1,5 @@
+{{- with resources.Get "logo.svg" -}}
+<div class="zw-logo">{{ .Content | safeHTML }}</div>
+{{- else -}}
+{{- warnf "zero-waste: assets/logo.svg non trovato" -}}
+{{- end -}}
