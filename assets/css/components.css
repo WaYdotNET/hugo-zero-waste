@@ -6,3 +6,8 @@
 .content h2, .content h3 { margin-top: 2rem; }
 .content blockquote { border-left: 3px solid var(--zw-accent); padding-left: 1rem; color: var(--zw-muted); margin-inline: 0; }
 .content img { border-radius: var(--zw-radius); }
+.post-list { list-style: none; padding: 0; }
+.post-item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid var(--zw-line); }
+.post-item a { border: 0; }
+.term-list { list-style: none; padding: 0; }
+.term-list li { padding: 0.4rem 0; }
