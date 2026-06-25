@@ -14,7 +14,6 @@
 <section class="home-section">
   <h2 class="label">{{ i18n "featured" }}</h2>
   <article class="featured">
-    {{ with .Params.cover }}{{ with .image }}<a href="{{ $p.RelPermalink }}" aria-label="{{ $p.Title }}" tabindex="-1"><img class="f-cover" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
     <a href="{{ $p.RelPermalink }}"><span class="f-title">{{ $p.Title }}</span></a>
     <div class="meta">{{ $p.Date.Format "02 Jan 2006" }} · {{ $p.ReadingTime }} {{ i18n "reading_time" }}</div>
     <p class="f-sum">{{ $p.Summary | plainify | truncate 200 }}</p>
