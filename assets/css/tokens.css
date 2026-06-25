@@ -1,23 +1,25 @@
 :root {
   --zw-bg: #FAF9F6;
-  --zw-ink: #1a1a1a;
-  --zw-muted: #7a7569;
-  --zw-accent: #6B8E6B;
-  --zw-line: #ebe8e0;
+  --zw-ink: #1a1a1a;            /* ~15:1 su bg — AAA */
+  --zw-muted: #57534b;          /* ~7:1 su bg — AAA anche per testo piccolo */
+  --zw-accent: #6B8E6B;         /* salvia, uso decorativo (bordi, underline) */
+  --zw-accent-text: #2f5a2f;    /* salvia scura ~7.6:1 su bg — AAA per testo/label */
+  --zw-line: #ddd9d0;
   --zw-code-bg: #f3f1ec;
 
   --zw-font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
   --zw-font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --zw-maxw: 720px;
-  --zw-gap: 1.5rem;
+  --zw-maxw: 860px;
+  --zw-gap: 1.6rem;
   --zw-radius: 6px;
 }
 [data-theme="dark"] {
   --zw-bg: #16181d;
-  --zw-ink: #e8e6e1;
-  --zw-muted: #8b8f98;
-  --zw-accent: #8fae8f;
-  --zw-line: #2a2d35;
+  --zw-ink: #e8e6e1;            /* AAA */
+  --zw-muted: #adb3bb;          /* ~7:1 su bg scuro — AAA */
+  --zw-accent: #8fae8f;         /* decorativo */
+  --zw-accent-text: #aecdae;    /* ~7:1 su bg scuro — AAA per testo/label */
+  --zw-line: #2f333c;
   --zw-code-bg: #1e2127;
 }

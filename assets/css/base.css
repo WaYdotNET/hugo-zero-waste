@@ -3,32 +3,45 @@
 @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/plex-mono-400.woff2") format("woff2"); }
 @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/plex-mono-500.woff2") format("woff2"); }
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+/* font-size in % sul root: rispetta la dimensione di carattere scelta nel browser
+   (fondamentale per ipovedenti e per lo zoom testuale) */
+html { -webkit-text-size-adjust: 100%; font-size: 112.5%; }
 body {
   margin: 0;
   background: var(--zw-bg);
   color: var(--zw-ink);
   font-family: var(--zw-font-sans);
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 1.125rem;          /* ~20px, scala con le preferenze utente */
+  line-height: 1.75;            /* ≥1.5 — AAA */
   -webkit-font-smoothing: antialiased;
   transition: background 0.2s ease, color 0.2s ease;
 }
 h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; }
-h1 { font-size: 2.2rem; }
-h2 { font-size: 1.6rem; }
-a { color: var(--zw-ink); text-decoration: none; border-bottom: 1px solid var(--zw-accent); }
-a:hover { color: var(--zw-accent); }
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.4rem; }
+.content p, .content li { max-width: 72ch; }   /* lunghezza riga leggibile in prosa */
+a { color: var(--zw-ink); text-decoration: none; border-bottom: 0; }
+a:hover { color: var(--zw-accent-text); }
+/* nel corpo degli articoli i link sono sottolineati (distinguibili senza affidarsi al solo colore — AAA) */
+.content a { text-decoration: underline; text-decoration-color: var(--zw-accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.content a:hover { text-decoration-color: var(--zw-accent-text); }
+:focus-visible { outline: 3px solid var(--zw-accent-text); outline-offset: 3px; border-radius: 2px; }
 img { max-width: 100%; height: auto; }
 code, pre { font-family: var(--zw-font-mono); font-size: 0.9em; }
 :not(pre) > code { background: var(--zw-code-bg); padding: 0.1em 0.35em; border-radius: 4px; }
 pre { background: var(--zw-code-bg); padding: 1rem; border-radius: var(--zw-radius); overflow-x: auto; }
-.meta { font-family: var(--zw-font-mono); font-size: 0.8rem; color: var(--zw-muted); }
-.label { font-family: var(--zw-font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--zw-accent); }
+.meta { font-family: var(--zw-font-mono); font-size: 0.92rem; color: var(--zw-muted); }
+.label { font-family: var(--zw-font-mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zw-accent-text); }
 
-@media (max-width: 640px) {
-  body { font-size: 16px; }
-  h1 { font-size: 1.8rem; }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+@media (max-width: 680px) {
+  html { font-size: 106.25%; } /* ~17px base, ancora ampio su mobile */
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.6rem; }
   .site-header { flex-direction: column; gap: 0.6rem; align-items: flex-start; }
   .site-nav { flex-wrap: wrap; }
 }
