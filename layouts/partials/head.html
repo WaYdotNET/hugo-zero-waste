@@ -3,7 +3,7 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
-<link rel="mask-icon" href="{{ "favicon.svg" | relURL }}" color="#6B8E6B">
+<link rel="mask-icon" href="{{ "favicon.svg" | relURL }}" color="#2f7d7a">
 {{ $tokens := resources.Get "css/tokens.css" }}
 {{ $base := resources.Get "css/base.css" }}
 {{ $layout := resources.Get "css/layout.css" }}

@@ -1,10 +1,10 @@
 :root {
   --zw-bg: #FAF9F6;
-  --zw-ink: #1a1a1a;            /* ~15:1 su bg — AAA */
-  --zw-muted: #57534b;          /* ~7:1 su bg — AAA anche per testo piccolo */
-  --zw-accent: #6B8E6B;         /* salvia, uso decorativo (bordi, underline) */
-  --zw-accent-text: #2f5a2f;    /* salvia scura ~7.6:1 su bg — AAA per testo/label */
-  --zw-line: #ddd9d0;
+  --zw-ink: #1d2b3a;            /* navy — testo/elementi forti, ~13.7:1 su bg (AAA) */
+  --zw-muted: #4b5563;          /* navy-gray ~7.2:1 su bg — AAA anche per testo piccolo */
+  --zw-accent: #2f7d7a;         /* teal, uso decorativo (bordi, underline) */
+  --zw-accent-text: #1f5a57;    /* teal scuro ~7.5:1 su bg — AAA per testo/label */
+  --zw-line: #e6e1d6;
   --zw-code-bg: #f1ece0;        /* pannello codice: warm tenue, distinto dal paper */
 
   --zw-font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
