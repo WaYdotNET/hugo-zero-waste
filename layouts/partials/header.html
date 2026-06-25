@@ -4,7 +4,7 @@
       {{ if site.Params.logo }}
       <img class="brand-logo" src="{{ site.Params.logo | relURL }}" alt="{{ site.Params.brand | default site.Title }}">
       {{ else }}
-      <span class="b-name">{{ site.Params.brand | default site.Title }}</span>
+      <span class="b-name"><span class="br">[</span>WaY<span class="dot">dot</span>NET<span class="br">]</span></span>
       {{ with site.Params.brandCaption }}<span class="b-cap">{{ . }}</span>{{ end }}
       {{ end }}
     </a>

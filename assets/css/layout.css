@@ -11,7 +11,8 @@
 }
 .site-brand { border: 0; display: flex; align-items: center; gap: 0.55rem; }
 .site-brand .brand-logo { height: 46px; width: auto; display: block; }
-.site-brand .b-name { font-weight: 600; font-size: 1.15rem; }
+.site-brand .b-name { font-family: var(--zw-font-sans); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; color: var(--zw-ink); }
+.site-brand .b-name .br, .site-brand .b-name .dot { color: var(--zw-accent); }
 .site-brand .b-cap { font-family: var(--zw-font-mono); font-size: 0.82rem; color: var(--zw-muted); }
 .site-nav { margin-left: auto; display: flex; align-items: center; gap: 1.1rem; font-family: var(--zw-font-mono); font-size: 0.92rem; }
 .site-nav a { border: 0; color: var(--zw-ink); }
