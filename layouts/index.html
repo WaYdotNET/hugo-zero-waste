@@ -3,6 +3,10 @@
 {{ $featured := index $posts 0 }}
 {{ $rest := first 6 (after 1 $posts) }}
 
+<section class="home-hero" aria-label="{{ site.Params.brand | default site.Title }}">
+  {{ partial "logo.html" . }}
+</section>
+
 {{ with site.Params.homeProfile.bio }}<blockquote class="lead">{{ . | markdownify }}</blockquote>{{ end }}
 
 {{ with $featured }}
