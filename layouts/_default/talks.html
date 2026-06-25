@@ -5,7 +5,7 @@
     {{ with .Content }}<div class="content">{{ . }}</div>{{ end }}
   </header>
   <ul class="card-list">
-    {{ range hugo.Data.talks }}
+    {{ range site.Data.talks }}
     <li>
       <a href="{{ .url | relURL }}">{{ .title }}</a>
       <span class="meta">{{ .event }}{{ with .with }} · {{ i18n "with_speaker" }} {{ . }}{{ end }}</span>

@@ -1,7 +1,7 @@
-{{ if gt (len hugo.Sites) 1 }}
+{{ if gt (len site.Languages) 1 }}
 <span class="lang-switch label">
-  {{ range hugo.Sites }}
-    {{ $lang := .Language }}
+  {{ range site.Languages }}
+    {{ $lang := . }}
     {{ if eq $lang.Lang site.Language.Lang }}
       <span class="current" aria-current="true">{{ $lang.Lang | upper }}</span>
     {{ else }}
