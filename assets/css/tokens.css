@@ -15,12 +15,3 @@
   --zw-gap: 1.6rem;
   --zw-radius: 6px;
 }
-[data-theme="dark"] {
-  --zw-bg: #16181d;
-  --zw-ink: #e8e6e1;            /* AAA */
-  --zw-muted: #adb3bb;          /* ~7:1 su bg scuro — AAA */
-  --zw-accent: #8fae8f;         /* decorativo */
-  --zw-accent-text: #aecdae;    /* ~7:1 su bg scuro — AAA per testo/label */
-  --zw-line: #2f333c;
-  --zw-code-bg: #20242d;        /* pannello codice rialzato, distinto dal grafite; github-dark leggibile */
-}

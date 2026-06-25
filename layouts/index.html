@@ -3,6 +3,7 @@
 {{ $featured := index $posts 0 }}
 {{ $rest := first 6 (after 1 $posts) }}
 
+{{ with site.Params.homeLogo }}<img class="home-logo" src="{{ . | relURL }}" alt="{{ site.Title }} — Architect · Enable · Simplify" width="900" height="314">{{ end }}
 {{ with site.Params.homeProfile.bio }}<blockquote class="lead">{{ . | markdownify }}</blockquote>{{ end }}
 
 {{ with $featured }}
