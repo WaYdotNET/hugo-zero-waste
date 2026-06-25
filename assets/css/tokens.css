@@ -5,7 +5,7 @@
   --zw-accent: #6B8E6B;         /* salvia, uso decorativo (bordi, underline) */
   --zw-accent-text: #2f5a2f;    /* salvia scura ~7.6:1 su bg — AAA per testo/label */
   --zw-line: #ddd9d0;
-  --zw-code-bg: #e7ddc8;        /* pannello codice: kraft chiaro, nettamente distinto dal paper */
+  --zw-code-bg: #f1ece0;        /* pannello codice: warm tenue, distinto dal paper */
 
   --zw-font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
   --zw-font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -22,5 +22,5 @@
   --zw-accent: #8fae8f;         /* decorativo */
   --zw-accent-text: #aecdae;    /* ~7:1 su bg scuro — AAA per testo/label */
   --zw-line: #2f333c;
-  --zw-code-bg: #232a35;        /* pannello codice "rialzato", distinto dal grafite; colori github-dark leggibili */
+  --zw-code-bg: #20242d;        /* pannello codice rialzato, distinto dal grafite; github-dark leggibile */
 }

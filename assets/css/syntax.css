@@ -156,4 +156,4 @@
 /* TextWhitespace */ [data-theme="dark"] .chroma .w { color:#6e7681 }
 
 /* Code block bg coerente col tema (paper/grafite) invece del bg dello stile */
-.chroma, [data-theme="dark"] .chroma { background: transparent !important; }
+.chroma, [data-theme="dark"] .chroma { background: var(--zw-code-bg) !important; }
