@@ -2,9 +2,10 @@
 <section class="home-section">
   <h2 class="label">{{ i18n "projects" }}</h2>
   <ul class="card-list">
-    {{ range . }}
-    <li><a href="{{ .url }}">{{ .name }}</a><span class="meta">{{ .desc }}</span></li>
+    {{ range first 3 . }}
+    <li><a href="{{ .url }}">{{ .name }}</a><span class="meta">{{ with .year }}{{ . }} · {{ end }}{{ .desc }}</span></li>
     {{ end }}
   </ul>
+  {{ if gt (len .) 3 }}<p class="home-more"><a class="label" href="{{ "projects/" | relLangURL }}">{{ i18n "all_projects" }}</a></p>{{ end }}
 </section>
 {{ end }}

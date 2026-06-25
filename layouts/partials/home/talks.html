@@ -2,7 +2,7 @@
 <section class="home-section">
   <h2 class="label">{{ i18n "talks" }}</h2>
   <ul class="card-list">
-    {{ range . }}
+    {{ range first 3 . }}
     <li>
       <a href="{{ .url | relURL }}">{{ .title }}</a>
       <span class="meta">{{ .event }}{{ with .with }} · {{ i18n "with_speaker" }} {{ . }}{{ end }}</span>
@@ -10,5 +10,6 @@
     </li>
     {{ end }}
   </ul>
+  {{ if gt (len .) 3 }}<p class="home-more"><a class="label" href="{{ "talks/" | relLangURL }}">{{ i18n "all_talks" }}</a></p>{{ end }}
 </section>
 {{ end }}

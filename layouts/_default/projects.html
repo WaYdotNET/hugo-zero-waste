@@ -8,7 +8,7 @@
     {{ range site.Data.projects }}
     <li>
       <a href="{{ .url }}">{{ .name }}</a>
-      <span class="meta">{{ .desc }}</span>
+      <span class="meta">{{ with .year }}{{ . }} · {{ end }}{{ .desc }}</span>
     </li>
     {{ end }}
   </ul>
