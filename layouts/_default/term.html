@@ -1,6 +1,0 @@
-{{ define "main" }}
-<header><h1><span class="label">{{ .Data.Singular }}</span> {{ .Title }}</h1></header>
-<ul class="post-list">
-  {{ range .Pages }}<li class="post-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="meta">{{ .Date.Format "2006" }}</span></li>{{ end }}
-</ul>
-{{ end }}

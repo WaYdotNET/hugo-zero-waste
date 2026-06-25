@@ -1,5 +1,6 @@
 <div class="social-icons">
   {{ range site.Params.socialIcons }}
-  <a href="{{ .url }}" class="label" rel="me noopener" target="_blank">{{ .name }}</a>
+  {{ $href := .url }}{{ if eq .name "email" }}{{ $href = printf "mailto:%s" .url }}{{ end }}
+  <a href="{{ $href }}" class="label"{{ if ne .name "email" }} rel="me noopener" target="_blank"{{ end }}>{{ .name }}</a>
   {{ end }}
 </div>

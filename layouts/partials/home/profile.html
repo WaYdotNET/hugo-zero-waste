@@ -1,6 +1,7 @@
 {{ with site.Params.homeProfile }}
+{{ $profile := . }}
 <section class="home-profile">
-  {{ with .avatar }}<img class="avatar" src="{{ . | relURL }}" alt="{{ $.Site.Params.homeProfile.name }}" width="120" height="120">{{ end }}
+  {{ with .avatar }}<img class="avatar" src="{{ . | relURL }}" alt="{{ $profile.name }}" width="120" height="120">{{ end }}
   <h1>{{ .name }}</h1>
   <p class="headline label">{{ .headline }}</p>
   {{ partial "social-icons.html" . }}
