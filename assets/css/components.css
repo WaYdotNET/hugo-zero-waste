@@ -19,9 +19,26 @@
 .home-bio { max-width: 38rem; margin: 0 auto 2rem; text-align: center; color: var(--zw-muted); }
 .home-section { margin: 2.5rem 0; }
 .home-section > h2 { margin-bottom: 1rem; border-bottom: 1px solid var(--zw-line); padding-bottom: 0.4rem; }
-.card-list { list-style: none; padding: 0; }
+.card-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 2rem; }
 .card-list li { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.7rem 0; border-bottom: 1px solid var(--zw-line); }
 .card-list li a:first-child { border: 0; font-weight: 500; }
+
+/* Home magazine */
+.lead { max-width: 60ch; color: var(--zw-muted); font-size: 1.1rem; margin: 0 0 2.5rem; }
+.featured { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.6rem 2.5rem; }
+.featured-main .f-title { font-family: var(--zw-font-sans); font-size: 1.75rem; font-weight: 600; line-height: 1.18; letter-spacing: -0.02em; display: block; margin-bottom: 0.4rem; }
+.featured-main a { border: 0; }
+.featured-main .f-sum { color: var(--zw-muted); margin-top: 0.6rem; }
+.featured-side { display: flex; flex-direction: column; gap: 1.1rem; }
+.featured-side .f-s-title { display: block; font-weight: 500; border: 0; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 2.5rem; }
+.g-card { padding: 0.9rem 0; border-top: 1px solid var(--zw-line); }
+.g-card a { display: block; font-weight: 500; border: 0; }
+.home-more { margin: 0.4rem 0 0; }
+
+@media (max-width: 720px) {
+  .featured, .grid-2, .card-list { grid-template-columns: 1fr; }
+}
 
 /* Blocchi di codice */
 pre { border: 1px solid var(--zw-line); }

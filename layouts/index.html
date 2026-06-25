@@ -1,7 +1,50 @@
 {{ define "main" }}
-{{ partial "home/profile.html" . }}
-{{ partial "home/mini-bio.html" . }}
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $featured := index $posts 0 }}
+{{ $side := first 2 (after 1 $posts) }}
+{{ $grid := first 6 (after 3 $posts) }}
+
+{{ with site.Params.homeProfile.bio }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+
+{{ with $featured }}
+<section class="home-section">
+  <h2 class="label">In evidenza</h2>
+  <div class="featured">
+    <article class="featured-main">
+      <a href="{{ .RelPermalink }}"><span class="f-title">{{ .Title }}</span></a>
+      <div class="meta">{{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min</div>
+      <p class="f-sum">{{ .Summary | plainify | truncate 180 }}</p>
+    </article>
+    <div class="featured-side">
+      {{ range $side }}
+      <article>
+        <a class="f-s-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <div class="meta">{{ .Date.Format "02 Jan 2006" }}</div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ with $grid }}
+<section class="home-section">
+  <h2 class="label">Writing</h2>
+  <div class="grid-2">
+    {{ range . }}
+    <article class="g-card">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <div class="meta">{{ .Date.Format "02 Jan 2006" }}</div>
+    </article>
+    {{ end }}
+  </div>
+  <p><a class="label" href="{{ "posts/" | relLangURL }}">tutti gli articoli →</a></p>
+</section>
+{{ end }}
+
 {{ partial "home/talks.html" . }}
+<p class="home-more"><a class="label" href="{{ "talks/" | relLangURL }}">tutti i talk →</a></p>
+
 {{ partial "home/projects.html" . }}
-{{ partial "home/latest-posts.html" . }}
+<p class="home-more"><a class="label" href="{{ "projects/" | relLangURL }}">tutti i progetti →</a></p>
 {{ end }}

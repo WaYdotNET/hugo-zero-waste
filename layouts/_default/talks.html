@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="content">{{ . }}</div>{{ end }}
+  </header>
+  <ul class="card-list">
+    {{ range hugo.Data.talks }}
+    <li>
+      <a href="{{ .url | relURL }}">{{ .title }}</a>
+      <span class="meta">{{ .event }}{{ with .with }} · con {{ . }}{{ end }}</span>
+      {{ with .slides }}<a class="label" href="{{ . | relURL }}">slide ↓</a>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</article>
+{{ end }}

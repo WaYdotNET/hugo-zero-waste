@@ -1,0 +1,18 @@
+<aside class="sidebar">
+  <a class="sb-brand" href="{{ "/" | relLangURL }}">
+    {{ with site.Params.homeProfile }}
+      {{ with .avatar }}<img class="sb-avatar" src="{{ . | relURL }}" alt="{{ $.Site.Params.homeProfile.name }}" width="72" height="72">{{ end }}
+      <span class="sb-name">{{ .name | default $.Site.Title }}</span>
+    {{ else }}
+      <span class="sb-name">{{ site.Title }}</span>
+    {{ end }}
+  </a>
+  {{ with site.Params.homeProfile.headline }}<p class="sb-headline label">{{ . }}</p>{{ end }}
+  <nav class="sb-nav" aria-label="Navigazione principale">
+    {{ range site.Menus.main }}<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>{{ end }}
+  </nav>
+  <div class="sb-foot">
+    {{ partial "social-icons.html" . }}
+    {{ partial "theme-toggle.html" . }}
+  </div>
+</aside>
