@@ -34,8 +34,10 @@ pre { border: 1px solid var(--zw-line); }
   position: absolute; top: 0.5rem; right: 0.5rem;
   background: var(--zw-bg); color: var(--zw-muted);
   border: 1px solid var(--zw-line); border-radius: var(--zw-radius);
-  padding: 0.15rem 0.55rem; cursor: pointer;
-  opacity: 0; transition: opacity 0.15s ease;
+  padding: 0.3rem; cursor: pointer; display: inline-flex; line-height: 0;
+  opacity: 0; transition: opacity 0.15s ease, color 0.15s ease;
 }
+.copy-code svg { display: block; }
 .highlight:hover .copy-code, .copy-code:focus-visible { opacity: 1; }
 .copy-code:hover { color: var(--zw-accent-text); border-color: var(--zw-accent); }
+.copy-code.copied { color: var(--zw-accent-text); border-color: var(--zw-accent); opacity: 1; }
