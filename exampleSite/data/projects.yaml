@@ -1,0 +1,6 @@
+- name: "Example Project"
+  desc: "A short description of an open source project."
+  url: "/posts/welcome/"
+- name: "Another Tool"
+  desc: "Something useful, minimal and fast."
+  url: "/posts/typography/"

@@ -1,11 +1,11 @@
 name = "Zero Waste"
 license = "MIT"
 licenselink = "https://github.com/WaYdotNET/hugo-zero-waste/blob/main/LICENSE"
-description = "A zero-waste, paper & ink Hugo theme — minimal, fast, bilingual."
+description = "A zero-waste, paper & ink Hugo theme — minimal, fast, accessible (WCAG AAA), i18n-ready."
 homepage = "https://github.com/WaYdotNET/hugo-zero-waste"
-tags = ["minimal", "blog", "personal", "dark mode", "multilingual"]
-features = ["blog", "dark-mode", "responsive", "i18n"]
-min_version = "0.128.0"
+tags = ["minimal", "blog", "personal", "accessibility", "i18n", "clean"]
+features = ["blog", "responsive", "i18n", "accessible", "syntax-highlighting"]
+min_version = "0.146.0"
 
 [author]
   name = "Carlo Bertini"

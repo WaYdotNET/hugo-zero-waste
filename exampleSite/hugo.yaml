@@ -1,0 +1,44 @@
+# Run from this folder with:  hugo server --themesDir ../..
+baseURL: "https://example.org/"
+title: "Zero Waste · demo"
+theme: ["zero-waste"]
+enableEmoji: true
+pygmentsUseClasses: true
+
+defaultContentLanguage: it
+languages:
+  it:
+    locale: it-IT
+    label: "Italiano"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+    menu:
+      main:
+        - { name: Writing, url: posts/, weight: 1 }
+        - { name: Talks, url: talks/, weight: 2 }
+        - { name: Projects, url: projects/, weight: 3 }
+        - { name: About, url: about/, weight: 4 }
+        - { name: Tags, url: tags/, weight: 6 }
+
+params:
+  brand: "Zero Waste"
+  brandCaption: "demo theme"
+  description: "Demo site for the Zero Waste Hugo theme."
+  footer:
+    text: "Built with the **Zero Waste** Hugo theme."
+  author: "Zero Waste"
+  homeProfile:
+    bio: "A minimal, fast, accessible Hugo theme — paper & ink, IBM Plex, zero waste."
+    latestCount: 5
+  socialIcons:
+    - { name: github, url: "https://github.com/WaYdotNET/hugo-zero-waste" }
+    - { name: rss, url: "/posts/index.xml" }
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
