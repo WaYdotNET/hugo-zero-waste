@@ -10,7 +10,7 @@
   --zw-font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
   --zw-font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --zw-maxw: 860px;             /* larghezza colonna editoriale centrata */
+  --zw-maxw: 1120px;            /* larghezza area contenuti (più ampia, menu comodo) */
   --zw-readw: 46rem;            /* larghezza di lettura articolo (~720px) */
   --zw-gap: 1.6rem;
   --zw-radius: 6px;

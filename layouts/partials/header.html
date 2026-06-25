@@ -1,10 +1,12 @@
 <header class="site-header">
-  <a class="site-brand" href="{{ "/" | relLangURL }}">
-    <span class="b-name">{{ site.Params.brand | default site.Title }}</span>
-    {{ with site.Params.brandCaption }}<span class="b-cap">{{ . }}</span>{{ end }}
-  </a>
-  <nav class="site-nav" aria-label="Navigazione principale">
-    {{ range site.Menus.main }}<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>{{ end }}
-    {{ partial "theme-toggle.html" . }}
-  </nav>
+  <div class="site-header-in">
+    <a class="site-brand" href="{{ "/" | relLangURL }}">
+      <span class="b-name">{{ site.Params.brand | default site.Title }}</span>
+      {{ with site.Params.brandCaption }}<span class="b-cap">{{ . }}</span>{{ end }}
+    </a>
+    <nav class="site-nav" aria-label="Navigazione principale">
+      {{ range site.Menus.main }}<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>{{ end }}
+      {{ partial "theme-toggle.html" . }}
+    </nav>
+  </div>
 </header>

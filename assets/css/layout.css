@@ -1,7 +1,12 @@
-/* Header orizzontale + colonna editoriale centrata */
+/* Header orizzontale sticky + colonna editoriale centrata */
 .site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--zw-bg);
+  border-bottom: 1px solid var(--zw-line);
+}
+.site-header-in {
   max-width: var(--zw-maxw); margin: 0 auto;
-  padding: 1.6rem var(--zw-gap) 0;
+  padding: 1rem var(--zw-gap);
   display: flex; align-items: baseline; gap: 1.5rem;
 }
 .site-brand { border: 0; display: flex; align-items: baseline; gap: 0.55rem; }
@@ -29,6 +34,6 @@
 .post { max-width: var(--zw-readw); margin: 0 auto; }
 
 @media (max-width: 640px) {
-  .site-header { flex-direction: column; align-items: flex-start; gap: 0.7rem; }
+  .site-header-in { flex-direction: column; align-items: flex-start; gap: 0.7rem; }
   .site-nav { margin-left: 0; flex-wrap: wrap; gap: 0.9rem; }
 }
