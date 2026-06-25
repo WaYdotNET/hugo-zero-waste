@@ -1,6 +1,7 @@
 <header class="site-header">
   <a class="site-title" href="{{ "/" | relLangURL }}">{{ site.Title }}</a>
   <nav class="site-nav">
-    {{ range site.Menus.main }}<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>{{ end }}
+    {{ range site.Menus.main }}<a class="label" href="{{ .URL | relLangURL }}">{{ .Name }}</a>{{ end }}
+    {{ partial "theme-toggle.html" . }}
   </nav>
 </header>
