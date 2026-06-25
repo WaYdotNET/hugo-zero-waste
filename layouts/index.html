@@ -8,31 +8,31 @@
 {{ with $featured }}
 {{ $p := . }}
 <section class="home-section">
-  <h2 class="label">In evidenza</h2>
+  <h2 class="label">{{ i18n "featured" }}</h2>
   <article class="featured">
     {{ with .Params.cover }}{{ with .image }}<a href="{{ $p.RelPermalink }}" aria-label="{{ $p.Title }}" tabindex="-1"><img class="f-cover" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
     <a href="{{ $p.RelPermalink }}"><span class="f-title">{{ $p.Title }}</span></a>
-    <div class="meta">{{ $p.Date.Format "02 Jan 2006" }} · {{ $p.ReadingTime }} min</div>
+    <div class="meta">{{ $p.Date.Format "02 Jan 2006" }} · {{ $p.ReadingTime }} {{ i18n "reading_time" }}</div>
     <p class="f-sum">{{ $p.Summary | plainify | truncate 200 }}</p>
   </article>
 </section>
 {{ end }}
 
 {{ partial "home/talks.html" . }}
-<p class="home-more"><a class="label" href="{{ "talks/" | relLangURL }}">tutti i talk →</a></p>
+<p class="home-more"><a class="label" href="{{ "talks/" | relLangURL }}">{{ i18n "all_talks" }}</a></p>
 
 {{ with $rest }}
 <section class="home-section">
-  <h2 class="label">Ultimi articoli</h2>
+  <h2 class="label">{{ i18n "latest" }}</h2>
   <ul class="post-list">
     {{ range . }}
     <li class="post-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="meta">{{ .Date.Format "02 Jan 2006" }}</span></li>
     {{ end }}
   </ul>
-  <p><a class="label" href="{{ "posts/" | relLangURL }}">tutti gli articoli →</a></p>
+  <p><a class="label" href="{{ "posts/" | relLangURL }}">{{ i18n "all_posts" }}</a></p>
 </section>
 {{ end }}
 
 {{ partial "home/projects.html" . }}
-<p class="home-more"><a class="label" href="{{ "projects/" | relLangURL }}">tutti i progetti →</a></p>
+<p class="home-more"><a class="label" href="{{ "projects/" | relLangURL }}">{{ i18n "all_projects" }}</a></p>
 {{ end }}

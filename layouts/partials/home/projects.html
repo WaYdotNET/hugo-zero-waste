@@ -1,6 +1,6 @@
 {{ with hugo.Data.projects }}
 <section class="home-section">
-  <h2 class="label">Progetti open source</h2>
+  <h2 class="label">{{ i18n "projects" }}</h2>
   <ul class="card-list">
     {{ range . }}
     <li><a href="{{ .url }}">{{ .name }}</a><span class="meta">{{ .desc }}</span></li>

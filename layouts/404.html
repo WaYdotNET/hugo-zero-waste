@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section style="text-align:center;padding:4rem 0;">
   <h1 class="label">404</h1>
-  <p>Pagina non trovata.</p>
-  <p><a href="{{ "/" | relLangURL }}">Torna alla home</a></p>
+  <p>{{ i18n "not_found_title" }}. {{ i18n "not_found_text" }}</p>
+  <p><a href="{{ "/" | relLangURL }}">{{ i18n "back_home" }}</a></p>
 </section>
 {{ end }}

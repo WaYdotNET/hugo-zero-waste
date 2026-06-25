@@ -8,8 +8,9 @@
       {{ with site.Params.brandCaption }}<span class="b-cap">{{ . }}</span>{{ end }}
       {{ end }}
     </a>
-    <nav class="site-nav" aria-label="Navigazione principale">
+    <nav class="site-nav" aria-label="{{ i18n "main_nav" }}">
       {{ range site.Menus.main }}<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>{{ end }}
+      {{ partial "lang-switch.html" . }}
     </nav>
   </div>
 </header>

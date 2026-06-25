@@ -1,0 +1,14 @@
+{{ if gt (len hugo.Sites) 1 }}
+<span class="lang-switch label">
+  {{ range hugo.Sites }}
+    {{ $lang := .Language }}
+    {{ if eq $lang.Lang site.Language.Lang }}
+      <span class="current" aria-current="true">{{ $lang.Lang | upper }}</span>
+    {{ else }}
+      {{ $link := printf "/%s/" $lang.Lang }}
+      {{ range $.AllTranslations }}{{ if eq .Language.Lang $lang.Lang }}{{ $link = .RelPermalink }}{{ end }}{{ end }}
+      <a href="{{ $link }}">{{ $lang.Lang | upper }}</a>
+    {{ end }}
+  {{ end }}
+</span>
+{{ end }}

@@ -8,8 +8,8 @@
     {{ range hugo.Data.talks }}
     <li>
       <a href="{{ .url | relURL }}">{{ .title }}</a>
-      <span class="meta">{{ .event }}{{ with .with }} · con {{ . }}{{ end }}</span>
-      {{ with .slides }}<a class="label" href="{{ . | relURL }}">slide ↓</a>{{ end }}
+      <span class="meta">{{ .event }}{{ with .with }} · {{ i18n "with_speaker" }} {{ . }}{{ end }}</span>
+      {{ with .slides }}<a class="label" href="{{ . | relURL }}">{{ i18n "slides" }}</a>{{ end }}
     </li>
     {{ end }}
   </ul>

@@ -1,10 +1,14 @@
-- id: talks
-  translation: "Talk"
-- id: projects
-  translation: "Progetti open source"
-- id: latest
-  translation: "Ultimi articoli"
-- id: all_posts
-  translation: "tutti gli articoli →"
-- id: theme
-  translation: "tema"
+featured: "In evidenza"
+talks: "Talk"
+projects: "Progetti open source"
+latest: "Ultimi articoli"
+all_posts: "tutti gli articoli →"
+all_talks: "tutti i talk →"
+all_projects: "tutti i progetti →"
+with_speaker: "con"
+slides: "slide ↓"
+reading_time: "min"
+main_nav: "Navigazione principale"
+not_found_title: "Pagina non trovata"
+not_found_text: "La pagina che cerchi non esiste o è stata spostata."
+back_home: "Torna alla home"
