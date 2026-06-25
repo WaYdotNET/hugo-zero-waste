@@ -43,23 +43,7 @@ pre { border: 1px solid var(--zw-line); }
 .copy-code:hover { color: var(--zw-accent-text); border-color: var(--zw-accent); }
 .copy-code.copied { color: var(--zw-accent-text); border-color: var(--zw-accent); opacity: 1; }
 
-/* Home hero logo-centrico */
+/* Home hero logo-centrico (statico, senza animazione) */
 .home-hero { display: flex; justify-content: center; margin: 1.5rem 0 2.4rem; }
 .zw-logo { width: min(440px, 82vw); }
 .zw-logo svg { width: 100%; height: auto; display: block; }
-
-/* Reveal al load: emblema dissolvenza+scala, testo in cascata */
-.zw-logo #emblem { opacity: 0; transform: scale(0.93); transform-box: fill-box; transform-origin: center;
-  animation: zw-bloom 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s forwards; }
-.zw-logo #wordmark, .zw-logo #tagline, .zw-logo #quote {
-  opacity: 0; transform: translateY(16px); transform-box: fill-box; transform-origin: center; }
-.zw-logo #wordmark { animation: zw-rise 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 0.95s forwards; }
-.zw-logo #tagline  { animation: zw-rise 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1.2s forwards; }
-.zw-logo #quote    { animation: zw-rise 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1.4s forwards; }
-@keyframes zw-bloom { to { opacity: 1; transform: none; } }
-@keyframes zw-rise  { to { opacity: 1; transform: none; } }
-
-@media (prefers-reduced-motion: reduce) {
-  .zw-logo #emblem, .zw-logo #wordmark, .zw-logo #tagline, .zw-logo #quote {
-    animation: none !important; opacity: 1 !important; transform: none !important; }
-}
