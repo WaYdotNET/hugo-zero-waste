@@ -33,6 +33,9 @@ code, pre { font-family: var(--zw-font-mono); font-size: 0.9em; }
 pre { background: var(--zw-code-bg); padding: 1rem; border-radius: var(--zw-radius); overflow-x: auto; }
 .meta { font-family: var(--zw-font-mono); font-size: 0.92rem; color: var(--zw-muted); }
 .label { font-family: var(--zw-font-mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zw-accent-text); }
+/* Motivo [ … ] sui titoli di sezione (parentesi teal, come il wordmark del logo) */
+h2.label::before { content: "[ "; color: var(--zw-accent); }
+h2.label::after  { content: " ]"; color: var(--zw-accent); }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
