@@ -1,0 +1,10 @@
+<section class="home-section">
+  <h2 class="label">Ultimi articoli</h2>
+  <ul class="post-list">
+    {{ $n := site.Params.homeProfile.latestCount | default 5 }}
+    {{ range first $n (where site.RegularPages "Section" "posts") }}
+    <li class="post-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="meta">{{ .Date.Format "2006" }}</span></li>
+    {{ end }}
+  </ul>
+  <p><a class="label" href="{{ "posts/" | relLangURL }}">tutti gli articoli →</a></p>
+</section>

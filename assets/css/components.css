@@ -11,3 +11,14 @@
 .post-item a { border: 0; }
 .term-list { list-style: none; padding: 0; }
 .term-list li { padding: 0.4rem 0; }
+.home-profile { text-align: center; padding: 2rem 0 1rem; }
+.home-profile .avatar { border-radius: 50%; }
+.home-profile h1 { margin: 0.6rem 0 0.3rem; }
+.home-profile .headline { color: var(--zw-accent); }
+.home-profile .social-icons { justify-content: center; margin-top: 0.8rem; }
+.home-bio { max-width: 38rem; margin: 0 auto 2rem; text-align: center; color: var(--zw-muted); }
+.home-section { margin: 2.5rem 0; }
+.home-section > h2 { margin-bottom: 1rem; border-bottom: 1px solid var(--zw-line); padding-bottom: 0.4rem; }
+.card-list { list-style: none; padding: 0; }
+.card-list li { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.7rem 0; border-bottom: 1px solid var(--zw-line); }
+.card-list li a:first-child { border: 0; font-weight: 500; }

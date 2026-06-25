@@ -1,0 +1,10 @@
+{{ with hugo.Data.projects }}
+<section class="home-section">
+  <h2 class="label">Progetti open source</h2>
+  <ul class="card-list">
+    {{ range . }}
+    <li><a href="{{ .url }}">{{ .name }}</a><span class="meta">{{ .desc }}</span></li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

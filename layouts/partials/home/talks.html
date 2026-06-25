@@ -1,0 +1,14 @@
+{{ with hugo.Data.talks }}
+<section class="home-section">
+  <h2 class="label">Talk</h2>
+  <ul class="card-list">
+    {{ range . }}
+    <li>
+      <a href="{{ .url | relURL }}">{{ .title }}</a>
+      <span class="meta">{{ .event }}{{ with .with }} · con {{ . }}{{ end }}</span>
+      {{ with .slides }}<a class="label" href="{{ . | relURL }}">slide ↓</a>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
