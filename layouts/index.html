@@ -7,19 +7,25 @@
 {{ with site.Params.homeProfile.bio }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
 
 {{ with $featured }}
+{{ $p := . }}
 <section class="home-section">
   <h2 class="label">In evidenza</h2>
   <div class="featured">
     <article class="featured-main">
-      <a href="{{ .RelPermalink }}"><span class="f-title">{{ .Title }}</span></a>
-      <div class="meta">{{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min</div>
-      <p class="f-sum">{{ .Summary | plainify | truncate 180 }}</p>
+      {{ with .Params.cover }}{{ with .image }}<a href="{{ $p.RelPermalink }}"><img class="f-cover" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
+      <a href="{{ $p.RelPermalink }}"><span class="f-title">{{ $p.Title }}</span></a>
+      <div class="meta">{{ $p.Date.Format "02 Jan 2006" }} · {{ $p.ReadingTime }} min</div>
+      <p class="f-sum">{{ $p.Summary | plainify | truncate 160 }}</p>
     </article>
     <div class="featured-side">
       {{ range $side }}
-      <article>
-        <a class="f-s-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <div class="meta">{{ .Date.Format "02 Jan 2006" }}</div>
+      {{ $s := . }}
+      <article class="g-card">
+        {{ with .Params.cover }}{{ with .image }}<a href="{{ $s.RelPermalink }}"><img class="g-thumb" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
+        <div class="g-body">
+          <a class="f-s-title" href="{{ $s.RelPermalink }}">{{ $s.Title }}</a>
+          <div class="meta">{{ $s.Date.Format "02 Jan 2006" }}</div>
+        </div>
       </article>
       {{ end }}
     </div>
@@ -32,9 +38,13 @@
   <h2 class="label">Writing</h2>
   <div class="grid-2">
     {{ range . }}
+    {{ $g := . }}
     <article class="g-card">
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      <div class="meta">{{ .Date.Format "02 Jan 2006" }}</div>
+      {{ with .Params.cover }}{{ with .image }}<a href="{{ $g.RelPermalink }}"><img class="g-thumb" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
+      <div class="g-body">
+        <a href="{{ $g.RelPermalink }}">{{ $g.Title }}</a>
+        <div class="meta">{{ $g.Date.Format "02 Jan 2006" }}</div>
+      </div>
     </article>
     {{ end }}
   </div>

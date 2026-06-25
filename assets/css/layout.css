@@ -11,11 +11,12 @@
 .sb-brand { display: flex; flex-direction: column; gap: 0.6rem; border: 0; }
 .sb-avatar { border-radius: 50%; }
 .sb-name { font-family: var(--zw-font-sans); font-weight: 600; font-size: 1.2rem; color: var(--zw-ink); line-height: 1.15; }
-.sb-headline { margin: 0.2rem 0 1.4rem; }
-.sb-nav { display: flex; flex-direction: column; gap: 0.55rem; font-family: var(--zw-font-mono); font-size: 0.95rem; }
+.sb-headline { margin: 0.2rem 0 0.9rem; }
+.sb-nav { display: flex; flex-direction: column; gap: 0.5rem; font-family: var(--zw-font-mono); font-size: 0.95rem; }
 .sb-nav a { border: 0; color: var(--zw-ink); }
 .sb-nav a:hover, .sb-nav a[aria-current="page"] { color: var(--zw-accent-text); }
-.sb-foot { margin-top: auto; padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.9rem; }
+/* social + toggle subito sotto il menu, non spinti in fondo */
+.sb-foot { margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem; }
 
 .theme-toggle { align-self: flex-start; background: none; border: 1px solid var(--zw-line); border-radius: var(--zw-radius); padding: 0.25rem 0.7rem; cursor: pointer; color: var(--zw-muted); }
 .theme-toggle:hover { color: var(--zw-accent-text); border-color: var(--zw-accent); }
