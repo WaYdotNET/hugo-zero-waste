@@ -1,7 +1,7 @@
 .post-header { margin-bottom: 2rem; }
 .post-meta { margin-top: 0.6rem; }
 .post-meta .tag { border: 0; }
-.post-cover { border-radius: var(--zw-radius); margin-bottom: 1.5rem; }
+.post-cover { display: block; width: auto; max-width: 100%; max-height: 300px; object-fit: contain; margin: 0 auto 1.5rem; border-radius: var(--zw-radius); }
 .content > * + * { margin-top: 1.2rem; }
 .content h2, .content h3 { margin-top: 2rem; }
 .content blockquote { border-left: 3px solid var(--zw-accent); padding-left: 1rem; color: var(--zw-muted); margin-inline: 0; }
@@ -21,7 +21,7 @@
 .lead { max-width: 60ch; margin: 0 0 2.8rem; padding: 0.3rem 0 0.3rem 1.3rem; border-left: 3px solid var(--zw-accent); font-size: 1.35rem; line-height: 1.5; color: var(--zw-ink); }
 .lead p { margin: 0; }
 .featured a { border: 0; }
-.featured .f-cover { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid var(--zw-line); border-radius: var(--zw-radius); margin-bottom: 1rem; }
+.featured .f-cover { display: block; width: auto; max-width: 100%; max-height: 300px; object-fit: contain; border: 1px solid var(--zw-line); border-radius: var(--zw-radius); margin: 0 auto 1rem; }
 .featured .f-title { font-family: var(--zw-font-sans); font-size: 1.9rem; font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; display: block; margin-bottom: 0.3rem; }
 .featured .f-sum { color: var(--zw-muted); margin-top: 0.7rem; }
 .home-more { margin: 0.4rem 0 0; }
