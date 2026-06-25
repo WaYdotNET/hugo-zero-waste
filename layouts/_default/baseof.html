@@ -2,13 +2,9 @@
 <html lang="{{ site.Language.Lang }}" data-theme="light">
 <head>{{ partial "head.html" . }}</head>
 <body>
-  <div class="site">
-    {{ partial "sidebar.html" . }}
-    <div class="content-col">
-      <main class="main">{{ block "main" . }}{{ end }}</main>
-      {{ partial "footer.html" . }}
-    </div>
-  </div>
+  {{ partial "header.html" . }}
+  <main class="main">{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
   {{ $js := slice (resources.Get "js/theme-toggle.js") (resources.Get "js/copy-code.js") | resources.Concat "js/zero-waste.js" | minify | fingerprint }}
   <script src="{{ $js.RelPermalink }}" defer></script>
 </body>

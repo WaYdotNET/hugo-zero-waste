@@ -1,4 +1,5 @@
 <footer class="site-footer">
+  {{ partial "social-icons.html" . }}
   <p>{{ with site.Params.footer.text }}{{ . | markdownify }}{{ end }}</p>
   <p class="meta">© {{ now.Year }} {{ site.Params.author }}</p>
 </footer>

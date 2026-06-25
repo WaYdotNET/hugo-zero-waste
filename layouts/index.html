@@ -1,8 +1,7 @@
 {{ define "main" }}
 {{ $posts := where site.RegularPages "Section" "posts" }}
 {{ $featured := index $posts 0 }}
-{{ $side := first 2 (after 1 $posts) }}
-{{ $grid := first 6 (after 3 $posts) }}
+{{ $rest := first 6 (after 1 $posts) }}
 
 {{ with site.Params.homeProfile.bio }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
 
@@ -10,50 +9,29 @@
 {{ $p := . }}
 <section class="home-section">
   <h2 class="label">In evidenza</h2>
-  <div class="featured">
-    <article class="featured-main">
-      {{ with .Params.cover }}{{ with .image }}<a href="{{ $p.RelPermalink }}"><img class="f-cover" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
-      <a href="{{ $p.RelPermalink }}"><span class="f-title">{{ $p.Title }}</span></a>
-      <div class="meta">{{ $p.Date.Format "02 Jan 2006" }} · {{ $p.ReadingTime }} min</div>
-      <p class="f-sum">{{ $p.Summary | plainify | truncate 160 }}</p>
-    </article>
-    <div class="featured-side">
-      {{ range $side }}
-      {{ $s := . }}
-      <article class="g-card">
-        {{ with .Params.cover }}{{ with .image }}<a href="{{ $s.RelPermalink }}"><img class="g-thumb" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
-        <div class="g-body">
-          <a class="f-s-title" href="{{ $s.RelPermalink }}">{{ $s.Title }}</a>
-          <div class="meta">{{ $s.Date.Format "02 Jan 2006" }}</div>
-        </div>
-      </article>
-      {{ end }}
-    </div>
-  </div>
-</section>
-{{ end }}
-
-{{ with $grid }}
-<section class="home-section">
-  <h2 class="label">Writing</h2>
-  <div class="grid-2">
-    {{ range . }}
-    {{ $g := . }}
-    <article class="g-card">
-      {{ with .Params.cover }}{{ with .image }}<a href="{{ $g.RelPermalink }}"><img class="g-thumb" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
-      <div class="g-body">
-        <a href="{{ $g.RelPermalink }}">{{ $g.Title }}</a>
-        <div class="meta">{{ $g.Date.Format "02 Jan 2006" }}</div>
-      </div>
-    </article>
-    {{ end }}
-  </div>
-  <p><a class="label" href="{{ "posts/" | relLangURL }}">tutti gli articoli →</a></p>
+  <article class="featured">
+    {{ with .Params.cover }}{{ with .image }}<a href="{{ $p.RelPermalink }}"><img class="f-cover" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}{{ end }}
+    <a href="{{ $p.RelPermalink }}"><span class="f-title">{{ $p.Title }}</span></a>
+    <div class="meta">{{ $p.Date.Format "02 Jan 2006" }} · {{ $p.ReadingTime }} min</div>
+    <p class="f-sum">{{ $p.Summary | plainify | truncate 200 }}</p>
+  </article>
 </section>
 {{ end }}
 
 {{ partial "home/talks.html" . }}
 <p class="home-more"><a class="label" href="{{ "talks/" | relLangURL }}">tutti i talk →</a></p>
+
+{{ with $rest }}
+<section class="home-section">
+  <h2 class="label">Ultimi articoli</h2>
+  <ul class="post-list">
+    {{ range . }}
+    <li class="post-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="meta">{{ .Date.Format "02 Jan 2006" }}</span></li>
+    {{ end }}
+  </ul>
+  <p><a class="label" href="{{ "posts/" | relLangURL }}">tutti gli articoli →</a></p>
+</section>
+{{ end }}
 
 {{ partial "home/projects.html" . }}
 <p class="home-more"><a class="label" href="{{ "projects/" | relLangURL }}">tutti i progetti →</a></p>
