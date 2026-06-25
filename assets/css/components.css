@@ -22,3 +22,16 @@
 .card-list { list-style: none; padding: 0; }
 .card-list li { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.7rem 0; border-bottom: 1px solid var(--zw-line); }
 .card-list li a:first-child { border: 0; font-weight: 500; }
+
+/* Blocchi di codice */
+pre { border: 1px solid var(--zw-line); }
+.highlight { position: relative; margin: 1.2rem 0; }
+.copy-code {
+  position: absolute; top: 0.5rem; right: 0.5rem;
+  background: var(--zw-bg); color: var(--zw-muted);
+  border: 1px solid var(--zw-line); border-radius: var(--zw-radius);
+  padding: 0.15rem 0.55rem; cursor: pointer;
+  opacity: 0; transition: opacity 0.15s ease;
+}
+.highlight:hover .copy-code, .copy-code:focus-visible { opacity: 1; }
+.copy-code:hover { color: var(--zw-accent-text); border-color: var(--zw-accent); }
