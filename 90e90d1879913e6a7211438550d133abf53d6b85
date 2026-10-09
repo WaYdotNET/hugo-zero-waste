@@ -1,0 +1,32 @@
+{
+  "schema_version": "ai-attribution/1.2.0",
+  "base_commit_sha": "c87b0a3fcc5d986db0cbe7839d4de26ad1da8989",
+  "sessions": {
+    "01a11fea-86b7-7320-a8a1-4452eb9bab5a": {
+      "agent": {
+        "tool": "omp",
+        "model": "anthropic/claude-fable-5-1"
+      },
+      "human_author": "Carlo Bertini \u003cwaydotnet@gmail.com\u003e"
+    }
+  },
+  "files": {
+    "layouts/partials/head.html": {
+      "01a11fea-86b7-7320-a8a1-4452eb9bab5a::959e4004f9f3": [
+        14
+      ]
+    }
+  },
+  "deletions": {
+    "layouts/partials/head.html": {
+      "01a11fea-86b7-7320-a8a1-4452eb9bab5a::959e4004f9f3": {
+        "total": 1
+      }
+    }
+  },
+  "turns": {
+    "01a11fea-86b7-7320-a8a1-4452eb9bab5a::959e4004f9f3": {
+      "model": "anthropic/claude-fable-5-1"
+    }
+  }
+}
