@@ -11,3 +11,4 @@
 {{ $syntax := resources.Get "css/syntax.css" }}
 {{ $css := slice $tokens $base $layout $components $syntax | resources.Concat "css/zero-waste.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ if hugo.IsProduction | or (eq site.Params.env "production") }}{{ partial "google_analytics.html" . }}{{ end }}
